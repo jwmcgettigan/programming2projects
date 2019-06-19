@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@EnigmaCSS.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enigmamachine.EnigmaFXMLController">
+   <children>
+      <BorderPane style="-fx-background-color: lightgray;" styleClass="testColorBackground" stylesheets="@EnigmaCSS.css">
+         <center>
+            <BorderPane maxHeight="654.0" maxWidth="1030.0" minHeight="654.0" minWidth="1030.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Button id="startButton" alignment="CENTER" minHeight="84.0" minWidth="425.0" mnemonicParsing="false" onAction="#startEnigmaMachine" styleClass="dropShadow" text="START ENIGMA MACHINE" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Imprint MT Shadow" size="28.5" />
+                     </font>
+                  </Button>
+               </center>
+               <right>
+                  <VBox alignment="CENTER" maxHeight="0.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Plugboard">
+                           <font>
+                              <Font name="Nirmala UI Semilight" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="plugboard" minHeight="25.0" minWidth="200.0" promptText="plugboard">
+                           <styleClass>
+                              <String fx:value="innerShadow" />
+                              <String fx:value="hoverDropShadow" />
+                           </styleClass>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="lightSteelBlueBackground" />
+                        <String fx:value="dropShadow" />
+                        <String fx:value="hoverGlowShadow" />
+                     </styleClass>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </right>
+               <bottom>
+                  <HBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <TextArea fx:id="console" editable="false" minHeight="350.0" styleClass="innerShadow" wrapText="true" />
+                              <Label text="after">
+                                 <font>
+                                    <Font name="Perpetua Titling MT Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <TextArea fx:id="message" minHeight="350.0" styleClass="innerShadow" wrapText="true" />
+                              <Label text="before">
+                                 <font>
+                                    <Font name="Perpetua Titling MT Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <styleClass>
+                        <String fx:value="lightSteelBlueBackground" />
+                        <String fx:value="dropShadow" />
+                        <String fx:value="hoverGlowShadow" />
+                     </styleClass>
+                  </HBox>
+               </bottom>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </padding>
+               <top>
+                  <HBox alignment="CENTER" prefHeight="110.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefWidth="61.0">
+                           <children>
+                              <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" text="Inner" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" text="Middle" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" text="Outer" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER" prefWidth="132.0">
+                           <children>
+                              <ListView fx:id="innerChoice" orientation="HORIZONTAL" styleClass="innerShadow" />
+                              <ListView fx:id="middleChoice" orientation="HORIZONTAL" styleClass="innerShadow" />
+                              <ListView fx:id="outerChoice" orientation="HORIZONTAL" styleClass="innerShadow" />
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER" prefWidth="740.0">
+                           <children>
+                              <ListView fx:id="innerStart" orientation="HORIZONTAL" styleClass="innerShadow" />
+                              <ListView fx:id="middleStart" orientation="HORIZONTAL" styleClass="innerShadow" />
+                              <ListView fx:id="outerStart" orientation="HORIZONTAL" styleClass="innerShadow" />
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="lightSteelBlueBackground" />
+                        <String fx:value="dropShadow" />
+                        <String fx:value="hoverGlowShadow" />
+                     </styleClass>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </top>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+               <left>
+                  <VBox alignment="CENTER" maxHeight="0.0" BorderPane.alignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <styleClass>
+                        <String fx:value="lightSteelBlueBackground" />
+                        <String fx:value="dropShadow" />
+                        <String fx:value="hoverGlowShadow" />
+                     </styleClass>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label text="Reflector">
+                           <font>
+                              <Font name="Nirmala UI Semilight" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="reflector" minHeight="25.0" minWidth="260.0" promptText="reflector">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <effect>
+                              <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+                                 <bumpInput>
+                                    <Shadow blurType="ONE_PASS_BOX" color="#ffffff00" />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <styleClass>
+                              <String fx:value="innerShadow" />
+                              <String fx:value="hoverDropShadow" />
+                           </styleClass>
+                        </TextField>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </left>
+               <styleClass>
+                  <String fx:value="blackBorder" />
+                  <String fx:value="testColorBackground" />
+                  <String fx:value="dropShadow" />
+               </styleClass>
+            </BorderPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false">
+                     <graphic>
+                        <Text onMouseClicked="#fileChooserOpen" strokeType="OUTSIDE" strokeWidth="0.0" text="Import File" />
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false">
+                     <graphic>
+                        <Text onMouseClicked="#fileChooserSave" strokeType="OUTSIDE" strokeWidth="0.0" text="Export File" />
+                     </graphic>
+                  </Menu>
+                  <Menu fx:id="volumeText" mnemonicParsing="false">
+                     <graphic>
+                        <Slider fx:id="volumeSlider" />
+                     </graphic>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

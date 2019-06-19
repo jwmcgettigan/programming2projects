@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="boardPane" onKeyPressed="#move" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.GameController">
+   <children>
+      <ImageView fx:id="boardDisplay" fitHeight="800.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/BoardAttempt5.jpg" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="tabPane" layoutX="110.0" layoutY="106.0" prefHeight="588.0" prefWidth="582.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Board" />
+            <Tab text="Players">
+               <content>
+                  <TabPane fx:id="playersTabPane" prefHeight="200.0" prefWidth="200.0" side="RIGHT" style="-fx-background-color: antiquewhite;" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Player 1">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="p1Popup" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Player 2">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="p2Popup" fitHeight="350.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Player 3">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="p3Popup" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Player 4">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="p4Popup" fitHeight="345.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+            <Tab text="Bank">
+               <content>
+                  <BorderPane fx:id="bankPane" />
+               </content>
+            </Tab>
+            <Tab text="Rules">
+               <content>
+                  <BorderPane fx:id="debugPane1">
+                     <center>
+                        <Button mnemonicParsing="false" text="TEST" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Button>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="buyButton" layoutX="130.0" layoutY="500.0" mnemonicParsing="false" onAction="#buy" prefHeight="35.0" prefWidth="47.0" text="BUY" />
+      <Button fx:id="payButton" layoutX="190.0" layoutY="500.0" mnemonicParsing="false" onAction="#pay" prefHeight="35.0" prefWidth="51.0" text="PAY" />
+      <Button fx:id="sellButton" layoutX="250.0" layoutY="500.0" mnemonicParsing="false" onAction="#rollDice" prefHeight="35.0" prefWidth="51.0" text="SELL" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="wealthText" alignment="CENTER" layoutX="400.0" layoutY="130.0" text="Player Wealth:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="cardText" alignment="CENTER" layoutX="410.0" layoutY="140.0" text="Card">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="propertiesText" alignment="CENTER" layoutX="420.0" layoutY="150.0" text="Properties">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

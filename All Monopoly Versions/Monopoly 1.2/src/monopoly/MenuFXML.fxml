@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bPane" minHeight="500.0" minWidth="500.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.MenuController">
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+               <font>
+                  <Font size="66.0" />
+               </font>
+            </Text>
+            <Button fx:id="start" mnemonicParsing="false" onAction="#start" text="START">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

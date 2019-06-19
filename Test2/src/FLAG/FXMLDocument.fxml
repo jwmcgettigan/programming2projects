@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefWidth="200.0" style="-fx-background-color: yellow;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="350.0" fitWidth="200.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../chinese_dragon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+   <right>
+      <BorderPane prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <Pane prefHeight="200.0" prefWidth="75.0" style="-fx-background-color: purple;" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="200.0" prefWidth="75.0" style="-fx-background-color: purple;" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="75.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </right>
+   <left>
+      <BorderPane prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <Pane prefWidth="75.0" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <Pane prefWidth="75.0" style="-fx-background-color: purple;" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefWidth="75.0" style="-fx-background-color: purple;" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </left>
+</BorderPane>

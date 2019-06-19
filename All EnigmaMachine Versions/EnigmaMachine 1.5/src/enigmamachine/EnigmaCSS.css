@@ -1,0 +1,30 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+}
+
+RadioButton{
+    -fx-rotate:270;
+}
+
+.lBlueBorder{
+    -fx-border-color:lightblue;
+    -fx-border-width:1px;
+}
+
+.marginForBorder{
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+#console.text-area .scroll-pane .content{
+    -fx-background-color:black;
+}
+
+#console.text-area {
+    -fx-text-fill:white;
+}

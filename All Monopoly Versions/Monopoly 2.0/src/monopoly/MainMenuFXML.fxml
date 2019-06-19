@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed" onKeyReleased="#onKeyReleased" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.MainMenuController">
+   <children>
+      <HBox fx:id="mainHBox" alignment="CENTER" style="-fx-background-color: lightgray;">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Player 1" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="token1" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="Player 2" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="token2" fitHeight="150.0" fitWidth="150.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="DUNGEONOPOLY">
+                     <font>
+                        <Font size="51.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="playerChooseText" text="Choosing Player 1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="leftArrow" alignment="TOP_LEFT" text="&lt;--">
+                           <font>
+                              <Font name="System Italic" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="token" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="rightArrow" alignment="TOP_LEFT" layoutX="68.0" layoutY="68.0" text="--&gt;">
+                           <font>
+                              <Font name="System Italic" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="enterText" text="Hit ENTER to select a token.">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#start" text="Button" />
+                  <Label fx:id="spaceText" text="Hit SPACE to start the game.">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Player 3" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="token3" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="Player 4" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="token4" fitHeight="150.0" fitWidth="150.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <InnerShadow height="255.0" radius="127.0" width="255.0" />
+         </effect>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+</Pane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane fx:id="bPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.FXMLDocumentController">
+   <top>
+      <MenuBar fx:id="menu" focusTraversable="false" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Resolution">
+            <items>
+              <MenuItem fx:id="small" mnemonicParsing="false" onAction="#changeResolution" text="675x700" />
+                  <MenuItem fx:id="medium" mnemonicParsing="false" onAction="#changeResolution" text="775x800" />
+                  <MenuItem fx:id="large" mnemonicParsing="false" onAction="#changeResolution" text="875x900" />
+                  <MenuItem fx:id="huge" mnemonicParsing="false" onAction="#changeResolution" text="975x1000" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Log">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#printDebugMessage" text="Log" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Move">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="From">
+                     <graphic>
+                        <TextField fx:id="from" prefWidth="30.0" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="To">
+                     <graphic>
+                        <TextField fx:id="to" prefWidth="30.0" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#moveToken" text="Move" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Rotate">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#rotateBoard" text="Rotate" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane fx:id="pane" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

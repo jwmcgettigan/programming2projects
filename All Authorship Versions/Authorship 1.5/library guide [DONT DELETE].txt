@@ -1,0 +1,26 @@
+Jane Austen
+	- Emma
+	- Pride and Prejudice
+	- Sense and Sensibility
+Charles Dickens
+	- Great Expectations
+	- Oliver Twist
+	- Tale of Two Cities
+John Grisham
+	- tumor
+Stephen King
+	- The Dark Tower
+	- Under the Dome
+Herman Melville
+	- Bartleby
+	- Moby Dick
+	- The Piazza Tales
+William Shakespeare
+	- Macbeth
+	- Othello
+	- Romeo and Juliet
+Mark Twain
+	- Connecticut Yankee
+	- Huck Finn
+	- Princ and Pauper
+	- Tom Sawyer

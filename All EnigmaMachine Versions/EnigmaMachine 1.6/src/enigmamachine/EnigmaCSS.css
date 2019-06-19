@@ -1,0 +1,80 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+}
+
+.root{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+#startButton{
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 43px;
+    -fx-background-radius: 43px;
+}
+
+#startButton:pressed{
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 0.0, 0.0);
+    -fx-translate-y: 3;
+}
+
+.hoverShadow:hover{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 0.0, 0.0);
+}
+
+.testing:active{
+    -fx-background-color: orange;
+}
+
+.hoverDropShadow:hover{
+    /*-fx-effect: dropshadow(gaussian, orange, 10, 0.3, 0.0, 0.0);*/
+    -fx-effect: dropshadow(gaussian, black, 10, 0.0, 0.0, 0.0);
+}
+
+.hoverDarkDropShadow:hover{
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0.0, 0.0);
+}
+
+RadioButton{
+    -fx-rotate:270;
+}
+
+.blackBorder{
+    -fx-border-color:black;
+    -fx-border-width:2px;
+}
+
+.lightSteelBlueBackground{
+    -fx-background-color: lightsteelblue;
+}
+
+.testColorBackground{
+    -fx-background-color: seashell;
+}
+
+.dropShadow{
+    -fx-effect: dropshadow(gaussian, black, 10, 0.0, 0.0, 0.0);
+}
+
+.innerShadow{
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 0.0, 0.0);
+}
+
+.marginForBorder{
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+#console.text-area .scroll-pane .content{
+    -fx-background-color:#333333;
+}
+
+#console.text-area {
+    -fx-text-fill:#cdcbcb;
+}
